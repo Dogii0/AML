@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4011ca73ce6f16408ef3b535738d451
+guid: 0dca2570cc2b8a04d82e0d773dea1303
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2560
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,91 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Wallpaper_1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1280
-        width: 1280
-        height: 1280
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b85e252227ba7a444a38964b29496417
-      internalID: -951549749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wallpaper_1_1
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 1280
-        width: 1280
-        height: 1280
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68a0730ec80d5de46898329f4b2e4fd0
-      internalID: -540351080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wallpaper_1_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1280
-        height: 1280
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c15fdbd809b505b448292fd4f172770e
-      internalID: 1797169591
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wallpaper_1_3
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 1280
-        height: 1280
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b60e943aabf1c546aa53748f8805c74
-      internalID: -378718916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -198,11 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wallpaper_1_0: -951549749
-      Wallpaper_1_1: -540351080
-      Wallpaper_1_2: 1797169591
-      Wallpaper_1_3: -378718916
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
