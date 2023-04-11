@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 502df787720cf0246aa186fb77cec50c
+guid: 3c190e937ab01ea41b200fef6a30e61c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 640
+  spritePixelsToUnits: 1280
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 427942505fc8ee24bbbb1e6063f4e40d
-      internalID: 404127144
+      spriteID: 9cd6894867299034ea3404427183a22d
+      internalID: 1783148194
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12bbd72edc07a7f40a7470c458c68e26
-      internalID: 136781637
+      spriteID: ea8e6a5b63273944fbd957f772f396ce
+      internalID: -91940876
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93c41e8bfd74f854cb8d5971719be1b8
-      internalID: 1528568673
+      spriteID: 2f7998b9debbae64ba052f471ab40203
+      internalID: 682224817
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8045a2d636cb2d458a1ab1d8642694b
-      internalID: 1429661064
+      spriteID: 9ee6fb3d1bd4e7b49bba1e15824a16e0
+      internalID: 193962465
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Border set_0: 404127144
-      Border set_1: 136781637
-      Border set_2: 1528568673
-      Border set_3: 1429661064
+      Border set_0: 1783148194
+      Border set_1: -91940876
+      Border set_2: 682224817
+      Border set_3: 193962465
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
