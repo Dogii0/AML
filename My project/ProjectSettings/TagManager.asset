@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Objects
+    uniqueID: 630039279
+    locked: 0
+  - name: Wall stuff
+    uniqueID: 3539408441
+    locked: 0
+  - name: Player and NPC
+    uniqueID: 1118559773
+    locked: 0
