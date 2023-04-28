@@ -110,7 +110,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 360
+        width: 1280
         height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,48 +121,6 @@ TextureImporter:
       bones: []
       spriteID: 6734193b5ad1e6442bf5d73caf769295
       internalID: 1957056947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Border corner down left_1
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 360
-        height: 1280
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0058a43c6c1aa634f9165df3bb5e889e
-      internalID: -1348481178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Border corner down left_2
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 360
-        height: 1280
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2f3b5d5cae50364dae05cd85d3995c9
-      internalID: 1429420887
       vertices: []
       indices: 
       edges: []
@@ -179,8 +137,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Border corner down left_0: 1957056947
-      Border corner down left_1: -1348481178
-      Border corner down left_2: 1429420887
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
