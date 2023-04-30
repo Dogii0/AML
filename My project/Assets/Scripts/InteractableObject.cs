@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractableObject : CollidableObject
 {
@@ -17,13 +18,13 @@ public class InteractableObject : CollidableObject
         if (Input.GetKey(KeyCode.E))
         {
             z_Interacted = true;
-            OnInteract();
+            // OnInteract();
             pressKey.text = " ";
         }
     }
 
-    private void OnInteract()
-    {
-        Debug.Log("Interact with" + name);
-    }
+    // private void OnInteract()
+    // {
+    //     Debug.Log("Interact with" + name);
+    // }
 }
