@@ -1,24 +1,26 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
-public class InteractableObject : CollidableObject
+public class DoorSceneChange : CollidableObject
 {
-    private bool z_Interacted = false;
     public TMP_Text pressKey;
+    public int sceneID;
+    private bool z_Interacted = false;
     protected override void OnCollided(GameObject collidedObject)
     {
         if (!z_Interacted)
         {
-            pressKey.text = "Press 'V'";
+            pressKey.text = "Press 'E'";
         }
         
-        if (Input.GetKey(KeyCode.V))
+        if (Input.GetKey(KeyCode.E))
         {
             z_Interacted = true;
             pressKey.text = " ";
+            SceneManager.LoadScene(sceneID);
         }
     }
 }
