@@ -19,6 +19,7 @@ public class InteractableObject : CollidableObject
         {
             z_Interacted = true;
             pressKey.text = " ";
+            Debug.Log("key pressed");
         }
     }
 }
