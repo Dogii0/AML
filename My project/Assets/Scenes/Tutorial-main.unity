@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048ecbdb18f00534785e7977c2cf628a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfItemWorld: {fileID: 3934767933179484903, guid: c63d7b14cf18bba4fa5a5dc8dd0ea375, type: 3}
+  pfItemWorld: {fileID: 1122972094}
   weaponSprite: {fileID: 21300000, guid: d6a44ab95b0def041a7929981a2c23a1, type: 3}
   healthPotionSprite: {fileID: 21300000, guid: cee9dbe90b270c944ae1dabf41c93b10, type: 3}
   coinSprite: {fileID: 21300000, guid: 25096ce515c063c48a2bd6b108c95912, type: 3}
@@ -1073,6 +1073,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1122972089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3076675828697906045, guid: 27d96f1da7a5ebe40b60d75626960ceb, type: 3}
+  m_PrefabInstance: {fileID: 5763040127089712039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1122972090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122972089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b43fe4951a7404ab04829966d5adc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1122972094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1608468698965291436, guid: 27d96f1da7a5ebe40b60d75626960ceb, type: 3}
+  m_PrefabInstance: {fileID: 5763040127089712039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1188835870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6675,6 +6697,14 @@ PrefabInstance:
     - target: {fileID: 3076675828697906045, guid: 27d96f1da7a5ebe40b60d75626960ceb, type: 3}
       propertyPath: m_Name
       value: ItemWorld
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956082542169201510, guid: 27d96f1da7a5ebe40b60d75626960ceb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956082542169201510, guid: 27d96f1da7a5ebe40b60d75626960ceb, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 630039279
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27d96f1da7a5ebe40b60d75626960ceb, type: 3}
