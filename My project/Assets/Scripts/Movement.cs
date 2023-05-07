@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
-
+        
         ItemWorld.SpawnItemWorld(new Vector3(1, 1), new Item { itemType = Item.ItemType.Tree, amount = 1 });
     }
 

@@ -16,9 +16,6 @@ public class Inventory
         AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
         AddItem(new Item { itemType = Item.ItemType.Coin, amount = 1 });
         AddItem(new Item { itemType = Item.ItemType.Tree, amount = 1 });
-        Debug.Log(itemList.Count);
-        
-        Debug.Log("Inventory");
     }
 
     public void AddItem(Item item)
