@@ -29,4 +29,19 @@ public class Item
 
                 }
         }
+
+        public bool IsStackable()
+        {
+                switch (itemType)
+                {
+                        default: 
+                        case ItemType.Coin:
+                        case ItemType.HealthPotion: 
+                        case ItemType.Tree:
+                                return true;
+                        
+                        case ItemType.Weapon:
+                                return false;
+                }
+        }
 }
