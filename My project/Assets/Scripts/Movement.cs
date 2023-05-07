@@ -6,14 +6,16 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed;
-    private Inventory _inventory;
+    private Inventory inventory;
 
     [SerializeField] private UI_Inventory uiInventory;
     
     private void Awake()
     {
-        _inventory = new Inventory();
-        uiInventory.SetInventory(_inventory);
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+
+        //ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item { itemType = Item.ItemType.Tree, amount = 1 });
     }
     void Start()
     {

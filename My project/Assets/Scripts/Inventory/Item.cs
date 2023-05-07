@@ -20,10 +20,10 @@ public class Item
                 switch (itemType)
                 {
                         default:
-                        case ItemType.Weapon: return ItemAssets.Instance.weaponSprite;
+                        case ItemType.Weapon:       return ItemAssets.Instance.weaponSprite;
                         case ItemType.HealthPotion: return ItemAssets.Instance.healthPotionSprite;
-                        case ItemType.Coin: return ItemAssets.Instance.coinSprite;
-                        case ItemType.Tree: return ItemAssets.Instance.treeSprite;
+                        case ItemType.Coin:         return ItemAssets.Instance.coinSprite;
+                        case ItemType.Tree:         return ItemAssets.Instance.treeSprite;
 
                 }
         }
