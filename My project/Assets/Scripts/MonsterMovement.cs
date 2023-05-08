@@ -14,12 +14,7 @@ public class MonsterMovement : MonoBehaviour
     public bool isChasing;
     public float ChaseDistance;
     private float distance;
-
-    void Start()
-    {
-        
-    }
-
+    
     void Update()
     {
         if (isChasing)
