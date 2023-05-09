@@ -6,7 +6,6 @@ public class PlayerHealth : MonoBehaviour
 {
     public double Max_Health = 10;
     public double health;
-    // Start is called before the first frame update
     void Start()
     {
         health = Max_Health;
