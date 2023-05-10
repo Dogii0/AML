@@ -835,6 +835,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0.5
   playerHealth: {fileID: 1508615168}
+  time: 2
+  touch: 0
 --- !u!70 &517774639
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
