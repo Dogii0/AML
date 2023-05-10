@@ -31,9 +31,4 @@ public class PlayerInventory : MonoBehaviour
     {
         ItemWorld.SpawnItemWorld(new Vector3(1, 1), new Item { itemType = Item.ItemType.Tree, amount = 1 });
     }
-    
-    void Update()
-    {
-        
-    }
 }

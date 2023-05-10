@@ -6,14 +6,14 @@ using UnityEngine;
 public class Inventory
 {
     public event EventHandler OnItemListChanged;
-    private List<Item> itemList;
+    private static List<Item> itemList;
 
     public Inventory()
     {
         itemList = new List<Item>();
 
         AddItem(new Item { itemType = Item.ItemType.Weapon, amount = 1 });
-        AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
+        AddItem(new Item { itemType = Item.ItemType.Food, amount = 1 });
         AddItem(new Item { itemType = Item.ItemType.Coin, amount = 1 });
         AddItem(new Item { itemType = Item.ItemType.Tree, amount = 1 });
     }

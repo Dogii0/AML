@@ -9,7 +9,7 @@ public class Item
         public enum ItemType
         {
                 Weapon,
-                HealthPotion,
+                Food,
                 Coin,
                 Tree
         }
@@ -23,7 +23,7 @@ public class Item
                 {
                         default:
                         case ItemType.Weapon:       return ItemAssets.Instance.weaponSprite;
-                        case ItemType.HealthPotion: return ItemAssets.Instance.healthPotionSprite;
+                        case ItemType.Food:         return ItemAssets.Instance.foodSprite;
                         case ItemType.Coin:         return ItemAssets.Instance.coinSprite;
                         case ItemType.Tree:         return ItemAssets.Instance.treeSprite;
 
@@ -36,7 +36,7 @@ public class Item
                 {
                         default: 
                         case ItemType.Coin:
-                        case ItemType.HealthPotion: 
+                        case ItemType.Food: 
                         case ItemType.Tree:
                                 return true;
                         

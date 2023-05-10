@@ -20,6 +20,7 @@ public class ItemWorld : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        // DontDestroyOnLoad(this.gameObject);
     }
 
     public void SetItem(Item item)

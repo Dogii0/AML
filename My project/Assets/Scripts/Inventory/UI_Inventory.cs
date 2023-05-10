@@ -16,6 +16,7 @@ public class UI_Inventory : MonoBehaviour
         itemSlot = transform.Find("ItemSlot");
         itemSlotTemplate = itemSlot.Find("ItemSlotTemplate");
         RefreshInventoryItems();
+        // DontDestroyOnLoad(this.gameObject);
     }
 
     public void SetInventory(Inventory inventory)
@@ -58,7 +59,7 @@ public class UI_Inventory : MonoBehaviour
             {
                 uiText.SetText("");
             }
-            
+            DontDestroyOnLoad(this.gameObject);
             
             x++;
             if (x > 6)
