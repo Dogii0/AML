@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInventoryTest : MonoBehaviour
+public class PlayerInventory : MonoBehaviour
 {
-    public float speed;
     private Inventory inventory;
 
     [SerializeField] private UI_Inventory uiInventory;
@@ -26,14 +26,14 @@ public class PlayerInventoryTest : MonoBehaviour
             itemWorld.DestroySelf();
         }
     }
-
+    
     void Start()
     {
-        transform.position = new Vector3(0,0,0);
+        ItemWorld.SpawnItemWorld(new Vector3(1, 1), new Item { itemType = Item.ItemType.Tree, amount = 1 });
     }
+    
     void Update()
     {
-        transform.Translate(Vector3.right*Time.deltaTime*speed*Input.GetAxis("Horizontal"));
-        transform.Translate(Vector3.up*Time.deltaTime*speed*Input.GetAxis("Vertical"));
+        
     }
 }

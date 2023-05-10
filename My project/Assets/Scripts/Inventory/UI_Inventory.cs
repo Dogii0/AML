@@ -15,6 +15,7 @@ public class UI_Inventory : MonoBehaviour
     {
         itemSlot = transform.Find("ItemSlot");
         itemSlotTemplate = itemSlot.Find("ItemSlotTemplate");
+        RefreshInventoryItems();
     }
 
     public void SetInventory(Inventory inventory)
