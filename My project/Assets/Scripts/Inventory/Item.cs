@@ -36,10 +36,9 @@ public class Item
                 {
                         default: 
                         case ItemType.Coin:
-                        case ItemType.Food: 
-                        case ItemType.Tree:
+                        case ItemType.Food:
                                 return true;
-                        
+                        case ItemType.Tree:
                         case ItemType.Weapon:
                                 return false;
                 }
