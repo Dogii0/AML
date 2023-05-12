@@ -12,7 +12,7 @@ public class MonsterDamage : MonoBehaviour
     public bool touch;
 
 
-    private void OnCollisionEnter2D(Collision2D Collission)
+    private void OnCollisionStay2D(Collision2D Collission)
     {
         if (Collission.gameObject.tag == "Player")
         {
