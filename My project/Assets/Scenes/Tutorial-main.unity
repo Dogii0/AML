@@ -2315,7 +2315,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1508615168}
-  movementSpeed: 2
+  animation: {fileID: 0}
+  movementSpeed: 1.5
+  playerDirection: 0
   moveX: 0
   moveY: 0
   _isMoving: 0
