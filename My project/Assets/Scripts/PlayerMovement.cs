@@ -58,13 +58,15 @@ public class PlayerMovement : MonoBehaviour
 
         setDirection(_moveInput);
         animator.SetBool(AnimationStrings.isMoving, isMoving);
+        animator.SetFloat(AnimationStrings.moveX, moveX);
+        animator.SetFloat(AnimationStrings.moveY, moveY);
     }
 
     private void setDirection(Vector2 _moveInput)
     {
         moveX = _moveInput.x;
         moveY = _moveInput.y;
-
+        
         if (Input.GetButtonDown("Horizontal"))
         {
             if (moveX < 0) { playerDirection = 4; }  // left
@@ -75,9 +77,6 @@ public class PlayerMovement : MonoBehaviour
             if (moveY < 0) { playerDirection = 1; }  // down
             else { playerDirection = 3; }  // up
         }
-
-        animator.SetFloat(AnimationStrings.moveX, moveX);
-        animator.SetFloat(AnimationStrings.moveY, moveY);
     }
 
     public void onAttack(InputAction.CallbackContext context)
