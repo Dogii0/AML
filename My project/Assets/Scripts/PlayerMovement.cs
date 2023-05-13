@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Vector2 _moveInput;
     public Animator animator;
-    public Animation animation;
+    // public Animation animation;
     private Rigidbody2D rb;
     public float movementSpeed;
     private KeyCode lastKeyPressed;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        animation = GetComponent<Animation>();
+        // animation = GetComponent<Animation>();
     }
 
     void Start()
@@ -84,7 +84,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started)
         {
-            // animator.enabled = false;
             animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
         }
