@@ -10,11 +10,17 @@ public class MonsterDamage : MonoBehaviour
     public PlayerHealth playerHealth;
     public float time = 2;
     public bool touch;
+    private GameObject player;
 
+    private void Awake()
+    {
+        player = GameObject.FindWithTag("Player");
+        // playerHealth = player;
+    }
 
     private void OnCollisionStay2D(Collision2D Collission)
     {
-        if (Collission.gameObject.tag == "Player")
+        if (Collission.gameObject == player)
         {
             playerHealth.TakeDamage(damage);
 

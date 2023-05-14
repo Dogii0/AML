@@ -10,11 +10,18 @@ public class MonsterMovement : MonoBehaviour
     public Transform[] patrolPoints;
     public float moveSpeed;
     public int patrolDestination;
-    public Transform playerTransform;
+    // public Transform playerTransform;
     public bool isChasing;
+    private Transform playerTransform;
     public float ChaseDistance;
     private float distance;
-    
+
+    private void Awake()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+        playerTransform = player.transform;
+    }
+
     void Update()
     {
         if (isChasing)
