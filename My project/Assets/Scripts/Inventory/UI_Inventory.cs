@@ -7,32 +7,33 @@ using UnityEngine.UI;
 
 public class UI_Inventory : MonoBehaviour
 {
-    private Inventory inventory;
+    public Inventory inventory;
     private Transform itemSlot;
     private Transform itemSlotTemplate;
-
     private void Awake()
     {
         itemSlot = transform.Find("ItemSlot");
         itemSlotTemplate = itemSlot.Find("ItemSlotTemplate");
         RefreshInventoryItems();
-        // DontDestroyOnLoad(this.gameObject);
     }
 
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
-
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventoryItems();
+    }
+
+    public Inventory GetInventory()
+    {
+        return inventory;
     }
 
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {
         RefreshInventoryItems();
     }
-
-    private void RefreshInventoryItems()
+    public void RefreshInventoryItems()
     {
         foreach (Transform child in itemSlot)
         {
@@ -62,10 +63,10 @@ public class UI_Inventory : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             
             x++;
-            if (x > 6)
+            if (x > 5)
             {
                 x = 0;
-                y++;
+                y--;
             }
         }
     }

@@ -14,6 +14,15 @@ public class ItemWorld : MonoBehaviour
 
         return itemWorld;
     }
+
+    public static ItemWorld DropItem(Vector2 dropPosition, Item item)
+    {
+        Vector2 dir = new Vector2(-1, 0);
+        ItemWorld itemWorld = SpawnItemWorld(dropPosition +dir, item);
+        // itemWorld.GetComponent<Rigidbody2D>().AddForce(dir, ForceMode2D.Impulse);
+        return itemWorld;
+    }
+    
     private Item item;
     private SpriteRenderer spriteRenderer;
 
