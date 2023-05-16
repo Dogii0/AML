@@ -10,12 +10,13 @@ public class ItemAssets : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        // DontDestroyOnLoad(this.gameObject);
     }
 
     public Transform pfItemWorld;
 
     public Sprite weaponSprite;
-    public Sprite healthPotionSprite;
+    public Sprite foodSprite;
     public Sprite coinSprite;
     public Sprite treeSprite;
 }
