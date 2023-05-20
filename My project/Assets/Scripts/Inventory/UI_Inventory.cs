@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CodeMonkey.Utils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,11 +11,19 @@ public class UI_Inventory : MonoBehaviour
     public Inventory inventory;
     private Transform itemSlot;
     private Transform itemSlotTemplate;
+    private GameObject player;
+    private Vector2 location;
     private void Awake()
     {
         itemSlot = transform.Find("ItemSlot");
         itemSlotTemplate = itemSlot.Find("ItemSlotTemplate");
         RefreshInventoryItems();
+        player = GameObject.FindWithTag("Player");
+    }
+    
+    private void Update()
+    {
+        location = player.transform.position;
     }
 
     public void SetInventory(Inventory inventory)
@@ -22,11 +31,6 @@ public class UI_Inventory : MonoBehaviour
         this.inventory = inventory;
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventoryItems();
-    }
-
-    public Inventory GetInventory()
-    {
-        return inventory;
     }
 
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
@@ -48,6 +52,16 @@ public class UI_Inventory : MonoBehaviour
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlot).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
+            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>   //Use item
+            {
+                // inventory.UseItem(item);
+            };
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>     //Drop item
+            {
+                Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
+                inventory.RemoveItem(item);
+                ItemWorld.DropItem(location, duplicateItem);
+            };
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();

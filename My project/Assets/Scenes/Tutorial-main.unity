@@ -2077,6 +2077,7 @@ GameObject:
   - component: {fileID: 1033911885}
   - component: {fileID: 1033911884}
   - component: {fileID: 1033911883}
+  - component: {fileID: 1033911886}
   m_Layer: 0
   m_Name: ItemSpawner_Coin
   m_TagString: Untagged
@@ -2166,6 +2167,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1033911886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033911882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4055ac029ea7f4db39938b2b686380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1038620813
 GameObject:
   m_ObjectHideFlags: 0
@@ -8542,12 +8555,12 @@ GameObject:
   - component: {fileID: 1908899351}
   - component: {fileID: 1908899350}
   m_Layer: 5
-  m_Name: Canvas - 1
+  m_Name: Pause Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1908899350
 MonoBehaviour:
   m_ObjectHideFlags: 0
