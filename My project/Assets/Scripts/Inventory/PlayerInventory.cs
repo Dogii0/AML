@@ -13,7 +13,6 @@ public class PlayerInventory : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
-        // uiInventory.SetPlayer(this);
         // ItemWorld.SpawnItemWorld(new Vector3(1, 1), new Item { itemType = Item.ItemType.Tree, amount = 1 });
     }
 

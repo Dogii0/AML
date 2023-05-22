@@ -10,7 +10,7 @@ public class Inventory
     private static List<Item> itemList;
     private Action<Item> useItemAction;
     private Item weapon = null;
-    private Vector2 location;
+    private static Vector2 location;
 
     private void Update()
     {
@@ -47,7 +47,7 @@ public class Inventory
         {
             if (weapon != null)
             {
-                ItemWorld.DropItem(location, weapon);
+                ItemWorld.DropItem(weapon);
                 itemList.Remove(weapon);
             }
             weapon = item;
