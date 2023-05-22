@@ -1,28 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CodeMonkey.Utils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_Inventory : MonoBehaviour
 {
-    private Inventory inventory;
+    public Inventory inventory;
     private Transform itemSlot;
     private Transform itemSlotTemplate;
-
     private void Awake()
     {
         itemSlot = transform.Find("ItemSlot");
         itemSlotTemplate = itemSlot.Find("ItemSlotTemplate");
         RefreshInventoryItems();
-        // DontDestroyOnLoad(this.gameObject);
     }
 
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
-
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventoryItems();
     }
@@ -31,8 +29,7 @@ public class UI_Inventory : MonoBehaviour
     {
         RefreshInventoryItems();
     }
-
-    private void RefreshInventoryItems()
+    public void RefreshInventoryItems()
     {
         foreach (Transform child in itemSlot)
         {
@@ -47,6 +44,17 @@ public class UI_Inventory : MonoBehaviour
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlot).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
+            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>   //Use item
+            {
+                // inventory.UseItem(item);
+            };
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>     //Drop item
+            {
+                Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
+                inventory.RemoveItem(item);
+                ItemWorld.DropItem(duplicateItem);
+            };
+            
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
@@ -62,10 +70,10 @@ public class UI_Inventory : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             
             x++;
-            if (x > 6)
+            if (x > 5)
             {
                 x = 0;
-                y++;
+                y--;
             }
         }
     }

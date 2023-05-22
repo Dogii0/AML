@@ -13,7 +13,6 @@ public class PlayerInventory : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
-        
         // ItemWorld.SpawnItemWorld(new Vector3(1, 1), new Item { itemType = Item.ItemType.Tree, amount = 1 });
     }
 
@@ -25,10 +24,5 @@ public class PlayerInventory : MonoBehaviour
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
         }
-    }
-    
-    void Start()
-    {
-        ItemWorld.SpawnItemWorld(new Vector3(1, 1), new Item { itemType = Item.ItemType.Tree, amount = 1 });
     }
 }
