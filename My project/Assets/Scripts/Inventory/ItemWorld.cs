@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ItemWorld : MonoBehaviour
 {
-    public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
+    public static ItemWorld SpawnItemWorld(Vector2 position, Item item)
     {
         Transform transform = Instantiate(ItemAssets.Instance.pfItemWorld, position, Quaternion.identity);
 
@@ -18,7 +18,7 @@ public class ItemWorld : MonoBehaviour
     public static ItemWorld DropItem(Vector2 dropPosition, Item item)
     {
         Vector2 dir = new Vector2(-1, 0);
-        ItemWorld itemWorld = SpawnItemWorld(dropPosition +dir, item);
+        ItemWorld itemWorld = SpawnItemWorld(dropPosition + dir, item);
         // itemWorld.GetComponent<Rigidbody2D>().AddForce(dir, ForceMode2D.Impulse);
         return itemWorld;
     }
