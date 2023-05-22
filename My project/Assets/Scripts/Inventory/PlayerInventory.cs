@@ -26,9 +26,4 @@ public class PlayerInventory : MonoBehaviour
             itemWorld.DestroySelf();
         }
     }
-    
-    void Start()
-    {
-        // ItemWorld.SpawnItemWorld(new Vector3(1, 1), new Item { itemType = Item.ItemType.Tree, amount = 1 });
-    }
 }
