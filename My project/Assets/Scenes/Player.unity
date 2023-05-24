@@ -2856,7 +2856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4490494049659072010, guid: 174c17db1dfa56940ac0cfa4cb192a0a, type: 3}
-  movementSpeed: 1.8
+  movementSpeed: 1.5
   playerDirection: 0
   moveX: 0
   moveY: 0
