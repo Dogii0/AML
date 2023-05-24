@@ -19,7 +19,26 @@ public class IntObjVendingMachine : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.V)&&z_Interacted)
+        
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("trigger");
+        if (other.gameObject == player)
+        {
+            if (!z_Interacted)
+            {
+                pressKey.text = "Press 'V'";
+            }
+
+            if (Input.GetKey(KeyCode.V))
+            {
+                pressKey.text = " ";
+                z_Interacted = true;
+            }
+        }
+        if (Input.GetKey(KeyCode.V) && z_Interacted)
         {
             if (!open)
             {
@@ -35,29 +54,11 @@ public class IntObjVendingMachine : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject == player)
-        {
-            if (!z_Interacted)
-            {
-                pressKey.text = "Press 'V'";
-            }
-
-            if (Input.GetKey(KeyCode.V))
-            {
-                pressKey.text = " ";
-                z_Interacted = true;
-            }
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D other)
+    void OnTriggerExit(Collider other)
     {
         if (other.gameObject == player)
         {
             z_Interacted = false;
-
         }
     }
 }
