@@ -858,6 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausemenuUI: {fileID: 1617725973}
+  Inventory: {fileID: 1696979095}
 --- !u!223 &697969084
 Canvas:
   m_ObjectHideFlags: 0
