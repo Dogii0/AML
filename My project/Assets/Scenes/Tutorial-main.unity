@@ -3452,7 +3452,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.71099997, y: 1.192}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!224 &1406981849
 RectTransform:
@@ -3483,7 +3483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406981839}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4a3c77341fde041827ca9ae56bf10f, type: 3}
   m_Name: 
@@ -3511,13 +3511,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406981839}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf906b6897078b4db757f25a5cd83a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d4ee33795b839a4e80fc3af8e098417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storeUI: {fileID: 1100217571}
-  pressKey: {fileID: 1732638676}
+  store: {fileID: 1100217571}
 --- !u!1 &1425701082
 GameObject:
   m_ObjectHideFlags: 0
