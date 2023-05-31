@@ -11,19 +11,11 @@ public class UI_Inventory : MonoBehaviour
     public Inventory inventory;
     private Transform itemSlot;
     private Transform itemSlotTemplate;
-    private GameObject player;
-    private Vector2 location;
     private void Awake()
     {
         itemSlot = transform.Find("ItemSlot");
         itemSlotTemplate = itemSlot.Find("ItemSlotTemplate");
         RefreshInventoryItems();
-        player = GameObject.FindWithTag("Player");
-    }
-    
-    private void Update()
-    {
-        location = player.transform.position;
     }
 
     public void SetInventory(Inventory inventory)
@@ -60,8 +52,9 @@ public class UI_Inventory : MonoBehaviour
             {
                 Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
                 inventory.RemoveItem(item);
-                ItemWorld.DropItem(location, duplicateItem);
+                ItemWorld.DropItem(duplicateItem);
             };
+            
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
