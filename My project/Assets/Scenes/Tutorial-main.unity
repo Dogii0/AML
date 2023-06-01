@@ -2908,8 +2908,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  storeUI: {fileID: 1100217571}
   pressKey: {fileID: 1732638676}
+  storeUI: {fileID: 1100217571}
 --- !u!114 &1406981851
 MonoBehaviour:
   m_ObjectHideFlags: 0

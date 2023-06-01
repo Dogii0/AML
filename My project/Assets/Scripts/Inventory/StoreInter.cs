@@ -1,34 +1,37 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CodeMonkey.Utils;
 using TMPro;
 using UnityEngine;
 
-public class StoreInter : StoreCollide
+public class StoreInter : CollidableObject
 {
-    //private bool z_Interacted = false;
+    private bool z_Interacted = false;
     public TMP_Text pressKey;
     private GameObject player;
+    public GameObject storeUI;
     void Awake()
     {
         player = GameObject.FindWithTag("Player");
+        
     }
 
     protected override void OnCollided(GameObject collidedObject)
     {
         if (collidedObject == player)
         {
-            if (!interact)
+            if (!z_Interacted)
             {
                 pressKey.text = "Press 'V'";
             }
 
-            if (Input.GetKey(KeyCode.V) && interact)
+            if (Input.GetKey(KeyCode.V) && !z_Interacted)
             {
+                z_Interacted = true;
                 pressKey.text = " ";
-                ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Kimbap, amount = 1 });
-                // z_Interacted = true;
-                interact = true;
+                storeUI.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
     }
