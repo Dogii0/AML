@@ -2753,6 +2753,7 @@ GameObject:
   - component: {fileID: 1406981844}
   - component: {fileID: 1406981845}
   - component: {fileID: 1406981850}
+  - component: {fileID: 1406981851}
   m_Layer: 0
   m_Name: Vending machine_0
   m_TagString: Untagged
@@ -2888,7 +2889,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406981839}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4a3c77341fde041827ca9ae56bf10f, type: 3}
   m_Name: 
@@ -2908,6 +2909,33 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   storeUI: {fileID: 1100217571}
+  pressKey: {fileID: 1732638676}
+--- !u!114 &1406981851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406981839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff2314e00669a94c84f530699d2223d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  z_Filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
   pressKey: {fileID: 1732638676}
 --- !u!1 &1425701082
 GameObject:
