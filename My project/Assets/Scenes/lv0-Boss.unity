@@ -3430,7 +3430,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   pressKey: {fileID: 62646751}
-  sceneID: 1
+  sceneID: 2
 --- !u!212 &2088655946
 SpriteRenderer:
   m_ObjectHideFlags: 0
