@@ -31,11 +31,13 @@ public class StoreCollide : MonoBehaviour
             if (!open)
             {
                 storeUI.SetActive(true);
+                Time.timeScale = 0f;
                 open = true;
             }
             else
             {
                 storeUI.SetActive(false);
+                Time.timeScale = 1f;
                 open = false;
             }
             Debug.Log("key pressed");
