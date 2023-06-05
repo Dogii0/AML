@@ -16,7 +16,7 @@ public class MonsterMovement : MonoBehaviour
     public float ChaseDistance;
     private float distance;
 
-    private void Awake()
+    public void Awake()
     {
         GameObject player = GameObject.FindWithTag("Player");
         playerTransform = player.transform;
