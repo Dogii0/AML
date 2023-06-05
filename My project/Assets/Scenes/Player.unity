@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: 20}
-  m_SizeDelta: {x: 20, y: 30}
+  m_AnchoredPosition: {x: -100, y: 0}
+  m_SizeDelta: {x: 30, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8562507
 MonoBehaviour:
@@ -234,8 +234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: 20}
-  m_SizeDelta: {x: 35, y: 35}
+  m_AnchoredPosition: {x: -100, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &48707729
 MonoBehaviour:
@@ -928,7 +928,7 @@ MonoBehaviour:
   pfItemWorld: {fileID: 632368684}
   coinSprite: {fileID: -1853709441, guid: 223497023db1a8049ab952b79fae00c0, type: 3}
   treeSprite: {fileID: -1989248633, guid: 1fd6c88ef84051a4585901270f7f3a92, type: 3}
-  umbrellaSprite: {fileID: 21300000, guid: 913d7c2b03487a64688a8676d0c33f40, type: 3}
+  umbrellaSprite: {fileID: 21300000, guid: a0f05e6437d6dce4e8561e729b631f58, type: 3}
   fireExtSprite: {fileID: 21300000, guid: 1df215f667ab42842a97f0ed18346af2, type: 3}
   kimbapSprite: {fileID: 21300000, guid: da3c401dd037bb146b4edb4d80c2f91c, type: 3}
   samgakSprite: {fileID: 21300000, guid: 642641f8d7711ce4cbcd96098d3f7140, type: 3}
@@ -1949,8 +1949,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: 10}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: -80, y: -15}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279445777
 MonoBehaviour:
@@ -1999,8 +1999,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
