@@ -23,10 +23,10 @@ public class StoreInter : CollidableObject
         {
             if (!z_Interacted)
             {
-                pressKey.text = "Press 'V'";
+                pressKey.text = "Press 'Q'";
             }
 
-            if (Input.GetKeyDown(KeyCode.V) && !z_Interacted)
+            if (Input.GetKeyDown(KeyCode.Q) && !z_Interacted)
             {
                 z_Interacted = true;
                 pressKey.text = " ";
@@ -39,7 +39,7 @@ public class StoreInter : CollidableObject
     {
         quizUI.SetActive(false);
         Time.timeScale = 1f;
-        ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Kimbap, amount = 1 });
+        ItemWorld.SpawnItemWorld(player.transform.position, new Item { itemType = Item.ItemType.Kimbap, amount = 1 });
         Debug.Log("drop harusnya");
         z_Interacted = true;
     }
