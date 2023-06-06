@@ -927,7 +927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfItemWorld: {fileID: 632368684}
   coinSprite: {fileID: -1853709441, guid: 223497023db1a8049ab952b79fae00c0, type: 3}
-  treeSprite: {fileID: -1989248633, guid: 1fd6c88ef84051a4585901270f7f3a92, type: 3}
+  treeSprite: {fileID: 1672447417, guid: cf60cfe233631074c97ebdb0fa174cf9, type: 3}
   umbrellaSprite: {fileID: 21300000, guid: a0f05e6437d6dce4e8561e729b631f58, type: 3}
   fireExtSprite: {fileID: 21300000, guid: 1df215f667ab42842a97f0ed18346af2, type: 3}
   kimbapSprite: {fileID: 21300000, guid: da3c401dd037bb146b4edb4d80c2f91c, type: 3}
