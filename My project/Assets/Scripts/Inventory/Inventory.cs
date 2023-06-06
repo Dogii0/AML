@@ -93,4 +93,9 @@ public class Inventory
     {
         return itemList;
     }
+
+    public Item getWeaponType()
+    {
+        return weapon;
+    }
 }

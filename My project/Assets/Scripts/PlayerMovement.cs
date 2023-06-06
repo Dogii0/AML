@@ -10,11 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     public float movementSpeed;
     private KeyCode lastKeyPressed;
+    private Inventory inventory;
+    // private Item item;
 
     [SerializeField] private int playerDirection;
     [SerializeField] private float moveX;
     [SerializeField] private float moveY;
     [SerializeField] private bool _isMoving;
+    [SerializeField] private bool _flipAnimation;
     public bool isMoving 
     { 
         get { return _isMoving; } 
@@ -34,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         transform.position = new Vector2(0,0);
+        inventory = new Inventory();
     }
     void Update()
     {
@@ -83,9 +87,38 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started)
         {
+            if (playerDirection == 4)
+            {
+                // _flipAnimation = true;
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                // _flipAnimation = false;
+            }
+            weaponType();
+            animator.SetBool(AnimationStrings.flipAnimation, _flipAnimation);
             animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
+    public void weaponType()
+    {
+        switch (inventory.getWeaponType().itemType)
+        {
+            case Item.ItemType.Tree:
+                animator.SetInteger(AnimationStrings.weaponType, 0);
+                break;
+            case Item.ItemType.FireExt:
+                animator.SetInteger(AnimationStrings.weaponType, 1);
+                break;
+            case Item.ItemType.Umbrella:
+                animator.SetInteger(AnimationStrings.weaponType, 2);
+                break;
+            default:
+                break;
+        }
+    }
 }
