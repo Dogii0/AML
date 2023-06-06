@@ -87,20 +87,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started)
         {
-            if (playerDirection == 4)
-            {
-                // _flipAnimation = true;
-                GetComponent<SpriteRenderer>().flipX = true;
-            }
-            else
-            {
-                // _flipAnimation = false;
-            }
             weaponType();
             animator.SetBool(AnimationStrings.flipAnimation, _flipAnimation);
             animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
-            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
