@@ -2864,6 +2864,7 @@ MonoBehaviour:
   moveX: 0
   moveY: 0
   _isMoving: 0
+  _flipAnimation: 0
 --- !u!212 &1992857420
 SpriteRenderer:
   m_ObjectHideFlags: 0
