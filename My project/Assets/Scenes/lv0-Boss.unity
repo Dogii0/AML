@@ -361,6 +361,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4155532096378841325, guid: 3a1a6dfc59413724abd782b887c084fb, type: 3}
   m_PrefabInstance: {fileID: 431797836}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &431797838
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431797837}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6941d31b208ea864cb655ae1df0490ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &611475931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,6 +3395,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4287449793442503512, guid: f2cf0e40c5132944bb83020f7a0d2525, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 564fd486c2202bc4caa4ec9d7b5aacf5, type: 2}
     - target: {fileID: 7127804255841305314, guid: f2cf0e40c5132944bb83020f7a0d2525, type: 3}
       propertyPath: m_Name
       value: Boss
