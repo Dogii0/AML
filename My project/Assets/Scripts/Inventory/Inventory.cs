@@ -79,7 +79,6 @@ public class Inventory
         else
         {
             itemList.Remove(item);
-            weapon = null;
         }
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
