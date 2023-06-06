@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 
@@ -93,8 +94,18 @@ public class Inventory
         return itemList;
     }
 
-    public Item getWeaponType()
+    public int getWeaponType()
     {
-        return weapon;
+        switch (weapon.itemType)
+        {
+            case Item.ItemType.Tree:
+                return 0;
+            case Item.ItemType.FireExt:
+                return 1;
+            case Item.ItemType.Umbrella:
+                return 2;
+        }
+
+        return -1;
     }
 }
