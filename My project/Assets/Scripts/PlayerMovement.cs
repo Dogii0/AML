@@ -83,6 +83,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started)
         {
+<<<<<<< HEAD
+=======
+            weaponType();
+            animator.SetBool(AnimationStrings.flipAnimation, _flipAnimation);
+>>>>>>> Jasper
             animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
         }

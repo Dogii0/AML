@@ -21,7 +21,7 @@ public class Inventory
         itemList = new List<Item>();
 
         AddItem(new Item { itemType = Item.ItemType.Coin, amount = 1 });
-        AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
+        // AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
     }
 
     public void AddItem(Item item)
@@ -79,7 +79,6 @@ public class Inventory
         else
         {
             itemList.Remove(item);
-            weapon = null;
         }
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
