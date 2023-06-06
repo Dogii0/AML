@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05f85623e089db3488f85820f754b1d5
+guid: cf60cfe233631074c97ebdb0fa174cf9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1280
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Quiz pop up 0002_0
+      name: Tree0000_0
       rect:
         serializedVersion: 2
-        x: 763
-        y: 432
-        width: 70
-        height: 64
+        x: 186
+        y: 17
+        width: 675
+        height: 1063
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59d11975d889a044e81e9cc2f027cbe4
-      internalID: -393335307
+      spriteID: 6cfbe5361eedcbb4b9bc25fa16663f66
+      internalID: 1672447417
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Quiz pop up 0002_0: -393335307
+      Tree0000_0: 1672447417
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

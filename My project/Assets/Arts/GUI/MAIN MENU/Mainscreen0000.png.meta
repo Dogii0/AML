@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05f85623e089db3488f85820f754b1d5
+guid: fb9e3c339c2a5154f9a6d6b16a6ae68d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Quiz pop up 0002_0
+      name: Mainscreen0000_0
       rect:
         serializedVersion: 2
-        x: 763
-        y: 432
-        width: 70
-        height: 64
+        x: 80
+        y: 36
+        width: 880
+        height: 438
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59d11975d889a044e81e9cc2f027cbe4
-      internalID: -393335307
+      spriteID: 438f5cb3edf8e174b97c7d1e48f43df1
+      internalID: 1139701393
       vertices: []
       indices: 
       edges: []
@@ -129,14 +129,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Quiz pop up 0002_0: -393335307
+      Mainscreen0000_0: 1139701393
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
