@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3aa9cb6a6556c074faa6e1a1d1b8ae84
+guid: 20e01ea31b0936847b39d07500c0f404
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Btnmainscreen0000_0
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 711
+        width: 184
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb4e7802ad1f3549bdec027cfc84fdc
+      internalID: 810198542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Btnmainscreen0000_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 650
+        width: 184
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4ff771fdd539f45a8dc209640c80b2
+      internalID: 467256627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Btnmainscreen0000_2
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 590
+        width: 184
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e7ae64cf5b7764f848bd4769cfa476
+      internalID: 1785154957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +177,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Btnmainscreen0000_0: 810198542
+      Btnmainscreen0000_1: 467256627
+      Btnmainscreen0000_2: 1785154957
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
