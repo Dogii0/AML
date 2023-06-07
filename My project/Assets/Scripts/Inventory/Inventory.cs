@@ -11,17 +11,25 @@ public class Inventory
     private Action<Item> useItemAction;
     private Item weapon = null;
     private static Vector2 location;
+    private GameObject player;
+    public PlayerHealth playerHealth;
+    
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+    }
 
     private void Update()
     {
-        location = GameObject.FindWithTag("Player").transform.position;
+        location = player.transform.position;
     }
     public Inventory()
     {
         itemList = new List<Item>();
 
         AddItem(new Item { itemType = Item.ItemType.Coin, amount = 10 });
-        AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
+        //AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
     }
 
     public void AddItem(Item item)
@@ -86,8 +94,17 @@ public class Inventory
 
     public void UseItem(Item item)
     {
-        
+        if (item.IsFood())
+        {
+            playerHealth.Heal(0.5);
+            Debug.Log("food bruh");
+        }
+        else
+        {
+            Debug.Log("not food bruh");
+        }
     }
+    
     public List<Item> GetItemList()
     {
         return itemList;

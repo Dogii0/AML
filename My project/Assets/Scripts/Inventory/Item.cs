@@ -51,4 +51,17 @@ public class Item
                                 return false;
                 }
         }
+
+        public bool IsFood()
+        {
+                switch (itemType)
+                {
+                        case ItemType.Kimbap:
+                        case ItemType.Samgak:
+                        case ItemType.Milk:
+                                return true;
+                        default:
+                                return false;
+                }
+        }
 }

@@ -29,5 +29,16 @@ public class PlayerHealth : MonoBehaviour
         }
         healthbar.SetHealth(health);
     }
+    public void Heal(double hp)
+    {
+        Debug.Log("heallllling");
+        health += hp;
+        if (health >= Max_Health)
+        {
+            health = Max_Health;
+            return;
+        }
+        healthbar.SetHealth(health);
+    }
     
 }
