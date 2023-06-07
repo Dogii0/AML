@@ -20,19 +20,16 @@ public class UI_Inventory : MonoBehaviour
         RefreshInventoryItems();
         player = GameObject.FindGameObjectWithTag("Player");
     }
-
     private void Update()
     {
         playerHealth = player.GetComponent<PlayerHealth>();
     }
-
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventoryItems();
     }
-
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {
         RefreshInventoryItems();
@@ -54,23 +51,26 @@ public class UI_Inventory : MonoBehaviour
 
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>   //Use item
             {
-                Debug.Log("pressing");
                 if (item.IsFood())
                 {
-                    playerHealth.Heal(0.5);
+                    playerHealth.Heal(1);
                     inventory.RemoveItem(item);
-                    Debug.Log("food bruh");
                 }
-                else
-                {
-                    Debug.Log("not food bruh");
-                }
+                else { Debug.Log("not food bruh"); }
             };
             itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>     //Drop item
             {
-                Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
-                inventory.RemoveItem(item);
-                ItemWorld.DropItem(duplicateItem);
+                if (item.IsStackable())
+                {
+                    Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
+                    inventory.RemoveItem(item);
+                    ItemWorld.DropItem(duplicateItem);
+                }
+                else
+                {
+                    inventory.RemoveItem(item);
+                    ItemWorld.DropItem(item);
+                }
             };
             
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
@@ -86,7 +86,6 @@ public class UI_Inventory : MonoBehaviour
                 uiText.SetText("");
             }
             DontDestroyOnLoad(this.gameObject);
-            
             x++;
             if (x > 3)
             {

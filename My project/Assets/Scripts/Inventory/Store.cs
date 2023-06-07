@@ -26,7 +26,7 @@ public class Store : CollidableObject
                 z_Interacted = true;
                 pressKey.text = " ";
                 ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Kimbap, amount = 1 });
-                // Debug.Log("key pressed");
+                // make it so it adds straight to the inventory
             }
         }
     }

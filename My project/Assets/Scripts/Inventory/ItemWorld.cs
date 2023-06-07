@@ -23,9 +23,9 @@ public class ItemWorld : MonoBehaviour
     
     public static ItemWorld DropItem(Item item)
     {
-        Vector2 dir = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+        Vector2 dir = new Vector2(Random.Range(-(float)0.5, 1), Random.Range(-(float)0.5, 1));
+        // Vector2 add = new Vector2(Random.Range(-1, (float)0.5), Random.Range(-1, (float)0.5));
         ItemWorld itemWorld = SpawnItemWorld(location+dir,item);
-        // itemWorld.GetComponent<Rigidbody2D>().AddForce(dir, ForceMode2D.Impulse);
         return itemWorld;
     }
     
@@ -48,7 +48,6 @@ public class ItemWorld : MonoBehaviour
     {
         return item;
     }
-
     public void DestroySelf()
     {
         Destroy(gameObject);

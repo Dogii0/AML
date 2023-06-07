@@ -40,7 +40,6 @@ public class StoreInter : CollidableObject
         quizUI.SetActive(false);
         Time.timeScale = 1f;
         ItemWorld.SpawnItemWorld(player.transform.position, new Item { itemType = Item.ItemType.Kimbap, amount = 1 });
-        Debug.Log("drop harusnya");
         z_Interacted = true;
     }
 
