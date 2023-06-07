@@ -8,12 +8,9 @@ public class Store : CollidableObject
     private bool z_Interacted = false;
     public TMP_Text pressKey;
     private GameObject player;
-    private Inventory inventory;
     void Awake()
     {
         player = GameObject.FindWithTag("Player");
-        inventory = player.GetComponent<Inventory>();
-        Debug.Log("Inventory "+ inventory);
     }
     protected override void OnCollided(GameObject collidedObject)
     {
