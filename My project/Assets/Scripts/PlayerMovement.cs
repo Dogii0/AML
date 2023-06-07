@@ -9,12 +9,15 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float movementSpeed;
     private KeyCode lastKeyPressed;
+    public static Item weapon;
 
     [SerializeField] private int playerDirection;
     [SerializeField] private float moveX;
     [SerializeField] private float moveY;
     [SerializeField] private bool _isMoving;
     [SerializeField] private bool _flipAnimation;
+
+    [SerializeField] private int cry;
     public bool isMoving 
     { 
         get { return _isMoving; } 
@@ -32,16 +35,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        cry = -1;
         movementSpeed = 1.5f;
         transform.position = new Vector2(0,0);
     }
     void Update()
     {
-        
     }
 
     private void FixedUpdate()
     {
+        switch (weapon.itemType)
+        {
+            case Item.ItemType.Tree:
+                cry = 0;
+                break;
+            case Item.ItemType.FireExt:
+                cry = 1;
+                break;
+            case Item.ItemType.Umbrella:
+                cry = 2;
+                break;
+            default:
+                cry = -1;
+                break;
+        }
         rb.velocity = new Vector2(
             _moveInput.x * movementSpeed,
             _moveInput.y * movementSpeed);
@@ -84,5 +102,10 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
         }
+    }
+
+    public void gimmeWeaponPls(Item item)
+    {
+        weapon = item;
     }
 }

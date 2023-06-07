@@ -12,8 +12,6 @@ public class Inventory
     private Item weapon = null;
     private static Vector2 location;
 
-    [SerializeField] private int weaponType;
-
     private void Update()
     {
         location = GameObject.FindWithTag("Player").transform.position;
@@ -27,8 +25,13 @@ public class Inventory
         // AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
     }
 
+    private void Start()
+    {
+    }
+
     private void Awake()
     {
+        
     }
 
     public void AddItem(Item item)
@@ -57,10 +60,9 @@ public class Inventory
                 ItemWorld.DropItem(weapon);
                 itemList.Remove(weapon);
             }
-
             weapon = item;
             itemList.Add(item);
-            weaponType = weapon.getWeaponType();
+            PlayerMovement.weapon = weapon;
         }
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
@@ -103,8 +105,8 @@ public class Inventory
         return itemList;
     }
 
-    public int whatWeapon()
-    {
-        return weaponType;
-    } 
+    // public Item getWeapon()
+    // {
+    //     return weapon;
+    // }
 }

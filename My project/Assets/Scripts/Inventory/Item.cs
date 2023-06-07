@@ -51,19 +51,4 @@ public class Item
                                 return false;
                 }
         }
-        
-        public int getWeaponType()
-        {
-                switch (itemType)
-                {
-                        case ItemType.Tree:
-                                return 0;
-                        case ItemType.FireExt:
-                                return 1;
-                        case ItemType.Umbrella:
-                                return 2;
-                        default:
-                                return -1;
-                }
-        }
 }
