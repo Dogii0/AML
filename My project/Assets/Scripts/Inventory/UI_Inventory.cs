@@ -13,6 +13,7 @@ public class UI_Inventory : MonoBehaviour
     private Transform itemSlotTemplate;
     private GameObject player;
     public PlayerHealth playerHealth;
+    private bool notFull = false;
     private void Awake()
     {
         itemSlot = transform.Find("ItemSlot");
@@ -24,16 +25,19 @@ public class UI_Inventory : MonoBehaviour
     {
         playerHealth = player.GetComponent<PlayerHealth>();
     }
+    
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventoryItems();
     }
+    
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {
         RefreshInventoryItems();
     }
+    
     public void RefreshInventoryItems()
     {
         foreach (Transform child in itemSlot)
