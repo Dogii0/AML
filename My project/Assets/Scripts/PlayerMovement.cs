@@ -35,31 +35,29 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        cry = -1;
+        cry = 0;
         movementSpeed = 1.5f;
         transform.position = new Vector2(0,0);
     }
     void Update()
     {
+        if (Item.ItemType.Tree == weapon.itemType)
+        {
+            cry = 1;
+            Debug.Log(weapon.itemType);
+        }else if (Item.ItemType.FireExt == weapon.itemType)
+        {
+            cry = 2;
+            Debug.Log(weapon.itemType);
+        }else if (Item.ItemType.Umbrella == weapon.itemType)
+        {
+            cry = 3;
+            Debug.Log(weapon.itemType);
+        }
     }
 
     private void FixedUpdate()
     {
-        switch (weapon.itemType)
-        {
-            case Item.ItemType.Tree:
-                cry = 0;
-                break;
-            case Item.ItemType.FireExt:
-                cry = 1;
-                break;
-            case Item.ItemType.Umbrella:
-                cry = 2;
-                break;
-            default:
-                cry = -1;
-                break;
-        }
         rb.velocity = new Vector2(
             _moveInput.x * movementSpeed,
             _moveInput.y * movementSpeed);
