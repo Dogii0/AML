@@ -42,18 +42,21 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (Item.ItemType.Tree == weapon.itemType)
+        inventory = new Inventory();
+        switch (weapon.itemType)
         {
-            cry = 1;
-            Debug.Log(weapon.itemType);
-        }else if (Item.ItemType.FireExt == weapon.itemType)
-        {
-            cry = 2;
-            Debug.Log(weapon.itemType);
-        }else if (Item.ItemType.Umbrella == weapon.itemType)
-        {
-            cry = 3;
-            Debug.Log(weapon.itemType);
+            case Item.ItemType.Tree:
+                cry = 0;
+                break;
+            case Item.ItemType.FireExt:
+                cry = 1;
+                break;
+            case Item.ItemType.Umbrella:
+                cry = 2;
+                break;
+            default:
+                cry = -1;
+                break;
         }
     }
 
