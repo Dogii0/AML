@@ -10,7 +10,6 @@ public class MonsterDamage : MonoBehaviour
     public double damage = 0.5;
     private GameObject player;
     public PlayerHealth playerHealth;
-    
 
     private void Awake()
     {
@@ -20,14 +19,11 @@ public class MonsterDamage : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D Collission)
     {
-        Debug.Log("collide1");
         if (Collission.gameObject == player)
         {
-            Debug.Log("collide");
+            Debug.Log("collide with Monster");
             playerHealth.TakeDamage(damage);
-
         }
-
     }
 }
 
