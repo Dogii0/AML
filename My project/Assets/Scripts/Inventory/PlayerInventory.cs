@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     private Inventory inventory;
-    private Item weapon = null;
+    public static Item weapon = null;
 
     [SerializeField] private UI_Inventory uiInventory;
     

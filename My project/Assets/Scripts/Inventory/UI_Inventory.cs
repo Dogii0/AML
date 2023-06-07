@@ -74,6 +74,7 @@ public class UI_Inventory : MonoBehaviour
                 {
                     inventory.RemoveItem(item);
                     ItemWorld.DropItem(item);
+                    PlayerInventory.weapon = null;
                 }
             };
             
