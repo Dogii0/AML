@@ -44,15 +44,15 @@ public class PlayerMovement : MonoBehaviour
         if (Item.ItemType.Tree == weapon.itemType)
         {
             cry = 1;
-            Debug.Log(weapon.itemType);
+            // Debug.Log(weapon.itemType);
         }else if (Item.ItemType.FireExt == weapon.itemType)
         {
             cry = 2;
-            Debug.Log(weapon.itemType);
+            // Debug.Log(weapon.itemType);
         }else if (Item.ItemType.Umbrella == weapon.itemType)
         {
             cry = 3;
-            Debug.Log(weapon.itemType);
+            // Debug.Log(weapon.itemType);
         }
     }
 

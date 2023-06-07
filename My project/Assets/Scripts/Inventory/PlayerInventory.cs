@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     private Inventory inventory;
-    private Item weapon;
+    private Item weapon = null;
 
     [SerializeField] private UI_Inventory uiInventory;
     
@@ -21,11 +21,15 @@ public class PlayerInventory : MonoBehaviour
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
         if (itemWorld != null)
         {
-            if (!itemWorld.GetItem().IsStackable()&&weapon!=null)
+            Debug.Log("pickup");
+            if (!itemWorld.GetItem().IsStackable())
             {
+                if (weapon != null)
+                {
+                    ItemWorld.DropItem(weapon);
+                    inventory.RemoveItem(weapon);
+                }
                 weapon = itemWorld.GetItem();
-                ItemWorld.DropItem(weapon);
-                inventory.RemoveItem(weapon);
             }
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
