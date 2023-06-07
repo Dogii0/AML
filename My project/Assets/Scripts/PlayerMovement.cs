@@ -5,19 +5,19 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Vector2 _moveInput;
-    public Animator animator;
-    // public Animation animation;
+    private Animator animator;
     private Rigidbody2D rb;
-    public float movementSpeed;
+    private float movementSpeed;
     private KeyCode lastKeyPressed;
-    private Inventory inventory;
-    // private Item item;
+    public static Item weapon;
 
     [SerializeField] private int playerDirection;
     [SerializeField] private float moveX;
     [SerializeField] private float moveY;
     [SerializeField] private bool _isMoving;
     [SerializeField] private bool _flipAnimation;
+
+    [SerializeField] private int cry;
     public bool isMoving 
     { 
         get { return _isMoving; } 
@@ -31,24 +31,33 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        // animation = GetComponent<Animation>();
     }
 
     void Start()
     {
+        cry = 0;
+        movementSpeed = 1.5f;
         transform.position = new Vector2(0,0);
-        inventory = new Inventory();
     }
     void Update()
     {
-        
+        if (Item.ItemType.Tree == weapon.itemType)
+        {
+            cry = 1;
+            Debug.Log(weapon.itemType);
+        }else if (Item.ItemType.FireExt == weapon.itemType)
+        {
+            cry = 2;
+            Debug.Log(weapon.itemType);
+        }else if (Item.ItemType.Umbrella == weapon.itemType)
+        {
+            cry = 3;
+            Debug.Log(weapon.itemType);
+        }
     }
 
     private void FixedUpdate()
     {
-        // transform.Translate(Vector2.right * (Time.deltaTime * movementSpeed * Input.GetAxis("Horizontal")));
-        // transform.Translate(Vector2.up * Time.deltaTime * movementSpeed * Input.GetAxis("Vertical"));
-
         rb.velocity = new Vector2(
             _moveInput.x * movementSpeed,
             _moveInput.y * movementSpeed);
@@ -87,28 +96,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started)
         {
-            weaponType();
             animator.SetBool(AnimationStrings.flipAnimation, _flipAnimation);
             animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
         }
     }
 
-    public void weaponType()
+    public void gimmeWeaponPls(Item item)
     {
-        switch (inventory.getWeaponType().itemType)
-        {
-            case Item.ItemType.Tree:
-                animator.SetInteger(AnimationStrings.weaponType, 0);
-                break;
-            case Item.ItemType.FireExt:
-                animator.SetInteger(AnimationStrings.weaponType, 1);
-                break;
-            case Item.ItemType.Umbrella:
-                animator.SetInteger(AnimationStrings.weaponType, 2);
-                break;
-            default:
-                break;
-        }
+        weapon = item;
     }
 }
