@@ -927,7 +927,7 @@ MonoBehaviour:
   pfItemWorld: {fileID: 632368684}
   coinSprite: {fileID: -1853709441, guid: 223497023db1a8049ab952b79fae00c0, type: 3}
   treeSprite: {fileID: -1989248633, guid: 1fd6c88ef84051a4585901270f7f3a92, type: 3}
-  umbrellaSprite: {fileID: 21300000, guid: 913d7c2b03487a64688a8676d0c33f40, type: 3}
+  umbrellaSprite: {fileID: 21300000, guid: a0f05e6437d6dce4e8561e729b631f58, type: 3}
   fireExtSprite: {fileID: 21300000, guid: 1df215f667ab42842a97f0ed18346af2, type: 3}
   kimbapSprite: {fileID: 21300000, guid: da3c401dd037bb146b4edb4d80c2f91c, type: 3}
   samgakSprite: {fileID: 21300000, guid: 642641f8d7711ce4cbcd96098d3f7140, type: 3}
@@ -2858,13 +2858,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af354a187ceb3bf4c94fcfeafe32ce69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 4490494049659072010, guid: 174c17db1dfa56940ac0cfa4cb192a0a, type: 3}
-  movementSpeed: 1.5
   playerDirection: 0
   moveX: 0
   moveY: 0
   _isMoving: 0
   _flipAnimation: 0
+  cry: 0
 --- !u!212 &1992857420
 SpriteRenderer:
   m_ObjectHideFlags: 0
