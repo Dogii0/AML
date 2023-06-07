@@ -5,13 +5,10 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Vector2 _moveInput;
-    public Animator animator;
-    // public Animation animation;
+    private Animator animator;
     private Rigidbody2D rb;
-    public float movementSpeed;
+    private float movementSpeed;
     private KeyCode lastKeyPressed;
-    private Inventory inventory;
-    // private Item item;
 
     [SerializeField] private int playerDirection;
     [SerializeField] private float moveX;
@@ -31,13 +28,12 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        // animation = GetComponent<Animation>();
     }
 
     void Start()
     {
+        movementSpeed = 1.5f;
         transform.position = new Vector2(0,0);
-        inventory = new Inventory();
     }
     void Update()
     {
@@ -46,9 +42,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // transform.Translate(Vector2.right * (Time.deltaTime * movementSpeed * Input.GetAxis("Horizontal")));
-        // transform.Translate(Vector2.up * Time.deltaTime * movementSpeed * Input.GetAxis("Vertical"));
-
         rb.velocity = new Vector2(
             _moveInput.x * movementSpeed,
             _moveInput.y * movementSpeed);
@@ -87,28 +80,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started)
         {
-            weaponType();
             animator.SetBool(AnimationStrings.flipAnimation, _flipAnimation);
             animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
-        }
-    }
-
-    public void weaponType()
-    {
-        switch (inventory.getWeaponType().itemType)
-        {
-            case Item.ItemType.Tree:
-                animator.SetInteger(AnimationStrings.weaponType, 0);
-                break;
-            case Item.ItemType.FireExt:
-                animator.SetInteger(AnimationStrings.weaponType, 1);
-                break;
-            case Item.ItemType.Umbrella:
-                animator.SetInteger(AnimationStrings.weaponType, 2);
-                break;
-            default:
-                break;
         }
     }
 }

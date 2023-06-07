@@ -12,16 +12,23 @@ public class Inventory
     private Item weapon = null;
     private static Vector2 location;
 
+    [SerializeField] private int weaponType;
+
     private void Update()
     {
         location = GameObject.FindWithTag("Player").transform.position;
     }
+
     public Inventory()
     {
         itemList = new List<Item>();
 
         AddItem(new Item { itemType = Item.ItemType.Coin, amount = 10 });
-        AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
+        // AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
+    }
+
+    private void Awake()
+    {
     }
 
     public void AddItem(Item item)
@@ -50,8 +57,10 @@ public class Inventory
                 ItemWorld.DropItem(weapon);
                 itemList.Remove(weapon);
             }
+
             weapon = item;
             itemList.Add(item);
+            weaponType = weapon.getWeaponType();
         }
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
@@ -71,7 +80,7 @@ public class Inventory
                 }
             }
 
-            if (itemInInventory != null && itemInInventory.amount <=0)
+            if (itemInInventory != null && itemInInventory.amount <= 0)
             {
                 itemList.Remove(itemInInventory);
             }
@@ -86,15 +95,16 @@ public class Inventory
 
     public void UseItem(Item item)
     {
-        
+
     }
+
     public List<Item> GetItemList()
     {
         return itemList;
     }
 
-    public Item getWeaponType()
+    public int whatWeapon()
     {
-        return weapon;
-    }
+        return weaponType;
+    } 
 }
