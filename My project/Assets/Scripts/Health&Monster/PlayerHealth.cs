@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Heal(double hp)
     {
-        Debug.Log("heallllling");
+        Debug.Log(health + "heallllling" + hp);
         health += hp;
         if (health >= Max_Health)
         {

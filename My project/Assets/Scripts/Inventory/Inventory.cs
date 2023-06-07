@@ -91,19 +91,6 @@ public class Inventory
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
-
-    public void UseItem(Item item)
-    {
-        if (item.IsFood())
-        {
-            playerHealth.Heal(0.5);
-            Debug.Log("food bruh");
-        }
-        else
-        {
-            Debug.Log("not food bruh");
-        }
-    }
     
     public List<Item> GetItemList()
     {
