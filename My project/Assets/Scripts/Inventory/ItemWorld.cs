@@ -23,9 +23,28 @@ public class ItemWorld : MonoBehaviour
     
     public static ItemWorld DropItem(Item item)
     {
-        Vector2 dir = new Vector2(Random.Range(-(float)0.5, 1), Random.Range(-(float)0.5, 1));
-        // Vector2 add = new Vector2(Random.Range(-1, (float)0.5), Random.Range(-1, (float)0.5));
-        ItemWorld itemWorld = SpawnItemWorld(location+dir,item);
+        double random1 = Random.Range(-1, 1);
+        double random2 = Random.Range(-1, 1);
+        if (random1 > 0 && random2 > 0)
+        {
+            random1 += 0.5;
+            random2 += 0.5;
+        } else if (random1 < 0 && random2 > 0)
+        {
+            random1 -= 0.5;
+            random2 += 0.5;
+        }else if (random1 < 0 && random2 < 0)
+        {
+            random1 -= 0.5;
+            random2 -= 0.5;
+        } else if (random1 > 0 && random2 < 0)
+        {
+            random1 += 0.5;
+            random2 -= 0.5;
+        }
+
+        Vector2 dir = new Vector2((float)random1 ,(float)random2);
+        ItemWorld itemWorld = SpawnItemWorld(location+ dir,item);
         return itemWorld;
     }
     
