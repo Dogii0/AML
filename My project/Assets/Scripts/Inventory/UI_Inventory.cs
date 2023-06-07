@@ -11,11 +11,19 @@ public class UI_Inventory : MonoBehaviour
     public Inventory inventory;
     private Transform itemSlot;
     private Transform itemSlotTemplate;
+    private GameObject player;
+    public PlayerHealth playerHealth;
     private void Awake()
     {
         itemSlot = transform.Find("ItemSlot");
         itemSlotTemplate = itemSlot.Find("ItemSlotTemplate");
         RefreshInventoryItems();
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void Update()
+    {
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     public void SetInventory(Inventory inventory)
@@ -38,7 +46,7 @@ public class UI_Inventory : MonoBehaviour
         }
         int x = 0;
         int y = 0;
-        float itemSlotCellSize = 45;
+        float itemSlotCellSize = 65;
         foreach (Item item in inventory.GetItemList())
         {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlot).GetComponent<RectTransform>();
@@ -46,7 +54,17 @@ public class UI_Inventory : MonoBehaviour
 
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>   //Use item
             {
-                // inventory.UseItem(item);
+                Debug.Log("pressing");
+                if (item.IsFood())
+                {
+                    playerHealth.Heal(0.5);
+                    inventory.RemoveItem(item);
+                    Debug.Log("food bruh");
+                }
+                else
+                {
+                    Debug.Log("not food bruh");
+                }
             };
             itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>     //Drop item
             {
@@ -70,7 +88,7 @@ public class UI_Inventory : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             
             x++;
-            if (x > 5)
+            if (x > 3)
             {
                 x = 0;
                 y--;

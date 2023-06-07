@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: 20}
-  m_SizeDelta: {x: 20, y: 30}
+  m_AnchoredPosition: {x: -100, y: 0}
+  m_SizeDelta: {x: 35, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8562507
 MonoBehaviour:
@@ -234,8 +234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: 20}
-  m_SizeDelta: {x: 35, y: 35}
+  m_AnchoredPosition: {x: -100, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &48707729
 MonoBehaviour:
@@ -838,7 +838,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausemenuUI: {fileID: 1617725973}
-  Inventory: {fileID: 1696979095}
 --- !u!223 &697969084
 Canvas:
   m_ObjectHideFlags: 0
@@ -1949,7 +1948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: 10}
+  m_AnchoredPosition: {x: -85, y: -15}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279445777
@@ -1999,8 +1998,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2453,6 +2452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea8b75a49b586f4fa5a6eaf071544a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1992857416}
 --- !u!1 &1872621496
 GameObject:
   m_ObjectHideFlags: 3
@@ -2748,7 +2748,7 @@ MonoBehaviour:
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1671372234}
 --- !u!114 &1992857413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2865,6 +2865,7 @@ MonoBehaviour:
   moveX: 0
   moveY: 0
   _isMoving: 0
+  _flipAnimation: 0
 --- !u!212 &1992857420
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2911,7 +2912,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2944,7 +2945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f3f52eaf96d9841a9f5123d653468b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneID: 0
+  sceneID: 2
 --- !u!1 &2088975520
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,17 +11,25 @@ public class Inventory
     private Action<Item> useItemAction;
     private Item weapon = null;
     private static Vector2 location;
+    private GameObject player;
+    public PlayerHealth playerHealth;
+    
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+    }
 
     private void Update()
     {
-        location = GameObject.FindWithTag("Player").transform.position;
+        location = player.transform.position;
     }
     public Inventory()
     {
         itemList = new List<Item>();
 
-        AddItem(new Item { itemType = Item.ItemType.Coin, amount = 1 });
-        AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
+        AddItem(new Item { itemType = Item.ItemType.Coin, amount = 10 });
+        //AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
     }
 
     public void AddItem(Item item)
@@ -79,18 +87,18 @@ public class Inventory
         else
         {
             itemList.Remove(item);
-            weapon = null;
         }
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
-
-    public void UseItem(Item item)
-    {
-        
-    }
+    
     public List<Item> GetItemList()
     {
         return itemList;
+    }
+
+    public Item getWeaponType()
+    {
+        return weapon;
     }
 }
