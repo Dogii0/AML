@@ -105,7 +105,8 @@ public class Inventory
     {
         return itemList;
     }
-
+    
+    /*
     public int getWeaponType()
     {
         switch (weapon.itemType)
@@ -120,4 +121,5 @@ public class Inventory
 
         return -1;
     }
+    */
 }

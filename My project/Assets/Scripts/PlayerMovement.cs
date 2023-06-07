@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started)
         {
-            animator.SetInteger(AnimationStrings.weaponType, inventory.getWeaponType());
+            //animator.SetInteger(AnimationStrings.weaponType, inventory.getWeaponType());
             animator.SetBool(AnimationStrings.flipAnimation, _flipAnimation);
             animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
