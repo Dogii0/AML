@@ -43,21 +43,24 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         inventory = new Inventory();
+        
         switch (weapon.itemType)
         {
             case Item.ItemType.Tree:
-                cry = 0;
-                break;
-            case Item.ItemType.FireExt:
                 cry = 1;
                 break;
-            case Item.ItemType.Umbrella:
+            case Item.ItemType.FireExt:
                 cry = 2;
                 break;
+            case Item.ItemType.Umbrella:
+                cry = 3;
+                break;
             default:
-                cry = -1;
+                cry = 0;
                 break;
         }
+        
+        animator.SetInteger(AnimationStrings.weaponType, cry);
     }
 
     private void FixedUpdate()
