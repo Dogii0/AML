@@ -838,6 +838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausemenuUI: {fileID: 1617725973}
+  Inventory: {fileID: 0}
 --- !u!223 &697969084
 Canvas:
   m_ObjectHideFlags: 0
@@ -931,7 +932,7 @@ MonoBehaviour:
   fireExtSprite: {fileID: -1011839121, guid: 1df215f667ab42842a97f0ed18346af2, type: 3}
   kimbapSprite: {fileID: 21300000, guid: da3c401dd037bb146b4edb4d80c2f91c, type: 3}
   samgakSprite: {fileID: 21300000, guid: 642641f8d7711ce4cbcd96098d3f7140, type: 3}
-  milkSprite: {fileID: 21300000, guid: 306e65fdf0bee144886c75ee403e76a7, type: 3}
+  milkSprite: {fileID: -802644577, guid: 306e65fdf0bee144886c75ee403e76a7, type: 3}
 --- !u!1 &977741283
 GameObject:
   m_ObjectHideFlags: 0

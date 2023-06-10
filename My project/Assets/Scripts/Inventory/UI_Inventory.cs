@@ -95,7 +95,7 @@ public class UI_Inventory : MonoBehaviour
             if (x > 3)
             {
                 x = 0;
-                y--;
+                y-=2;
             }
         }
     }
