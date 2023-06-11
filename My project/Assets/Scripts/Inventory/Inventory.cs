@@ -28,6 +28,7 @@ public class Inventory
 
     private void Start()
     {
+        PlayerMovement.weapon = null;
     }
 
     private void Awake()
@@ -106,18 +107,5 @@ public class Inventory
         return itemList;
     }
 
-    public int getWeaponType()
-    {
-        switch (weapon.itemType)
-        {
-            case Item.ItemType.Tree:
-                return 0;
-            case Item.ItemType.FireExt:
-                return 1;
-            case Item.ItemType.Umbrella:
-                return 2;
-        }
-
-        return -1;
-    }
+    
 }

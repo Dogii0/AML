@@ -9,16 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float movementSpeed;
     private KeyCode lastKeyPressed;
-    private Inventory inventory;
-    public static Item weapon;
+    public static Item weapon = null;
 
     [SerializeField] private int playerDirection;
     [SerializeField] private float moveX;
     [SerializeField] private float moveY;
     [SerializeField] private bool _isMoving;
-    [SerializeField] private bool _flipAnimation;
-
-    [SerializeField] private int cry;
+    [SerializeField] private int weaponInt;
     public bool isMoving 
     { 
         get { return _isMoving; } 
@@ -36,31 +33,24 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        cry = 0;
+        weaponInt = 0;
         movementSpeed = 1.5f;
         transform.position = new Vector2(0,0);
+        animator.SetInteger(AnimationStrings.weaponType, weaponInt);
     }
+    
     void Update()
     {
-        inventory = new Inventory();
-        
-        switch (weapon.itemType)
+        if (weapon == null)
         {
-            case Item.ItemType.Tree:
-                cry = 1;
-                break;
-            case Item.ItemType.FireExt:
-                cry = 2;
-                break;
-            case Item.ItemType.Umbrella:
-                cry = 3;
-                break;
-            default:
-                cry = 0;
-                break;
+            weaponInt = 0;
         }
-        
-        animator.SetInteger(AnimationStrings.weaponType, cry);
+        else
+        {
+            weaponInt = weapon.getWeaponType(weapon);
+        }
+
+        animator.SetInteger(AnimationStrings.weaponType, weaponInt);
     }
 
     private void FixedUpdate()
@@ -101,17 +91,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void onAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (weapon != null)
         {
-            animator.SetInteger(AnimationStrings.weaponType, inventory.getWeaponType());
-            animator.SetBool(AnimationStrings.flipAnimation, _flipAnimation);
-            animator.SetTrigger(AnimationStrings.attackTrigger);
-            animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
+            if (context.started)
+            {
+                animator.SetTrigger(AnimationStrings.attackTrigger);
+                animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
+            }
         }
-    }
-
-    public void gimmeWeaponPls(Item item)
-    {
-        weapon = item;
     }
 }

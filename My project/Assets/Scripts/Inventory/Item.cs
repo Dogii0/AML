@@ -64,4 +64,23 @@ public class Item
                                 return false;
                 }
         }
+        
+        public int getWeaponType(Item weapon)
+        {
+                if (weapon == null)
+                {
+                        return 0;
+                }
+                switch (weapon.itemType)
+                {
+                        case ItemType.Tree:
+                                return 1;
+                        case ItemType.FireExt:
+                                return 2;
+                        case ItemType.Umbrella:
+                                return 3;
+                        default:
+                                return 0;
+                }
+        }
 }
