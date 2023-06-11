@@ -33,10 +33,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        weaponInt = 0;
+        weapon = null;
         movementSpeed = 1.5f;
         transform.position = new Vector2(0,0);
-        animator.SetInteger(AnimationStrings.weaponType, weaponInt);
     }
     
     void Update()

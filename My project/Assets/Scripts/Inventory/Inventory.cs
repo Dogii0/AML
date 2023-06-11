@@ -23,12 +23,10 @@ public class Inventory
         itemList = new List<Item>();
 
         AddItem(new Item { itemType = Item.ItemType.Coin, amount = 10 });
-        // AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
     }
 
     private void Start()
     {
-        PlayerMovement.weapon = null;
     }
 
     private void Awake()
