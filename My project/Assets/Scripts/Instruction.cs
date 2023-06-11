@@ -1,33 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using Unity.VisualScripting;
+using TMPro;
 
-public class Store : CollidableObject
+public class Instruction : CollidableObject
 {
     private bool z_Interacted = false;
     public TMP_Text pressKey;
     private GameObject player;
+    public GameObject instUI;
     void Awake()
     {
         player = GameObject.FindWithTag("Player");
     }
+    
     protected override void OnCollided(GameObject collidedObject)
     {
         if (collidedObject == player)
         {
             if (!z_Interacted)
             {
-                pressKey.text = "Press 'V'";
+                pressKey.text = "Press 'X'";
+                z_Interacted = true;
             }
 
-            if (Input.GetKey(KeyCode.V) && !z_Interacted)
+            if (Input.GetKey(KeyCode.X))
             {
-                z_Interacted = true;
                 pressKey.text = " ";
-                ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Kimbap, amount = 1 });
-                // make it so it adds straight to the inventory
+                instUI.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
+    }
+    
+    public void close_ui()
+    {
+        instUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
