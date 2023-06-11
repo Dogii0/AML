@@ -3228,7 +3228,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Keys:\n\nSpacebar \t\t\t\t- Attack\nWASD / Arrow Keys \t\t- Move\nLeft
-    Click (Inventory) \t- Use consumable item\nRight Click (Inventory) \t- Drop item"
+    Click (Inventory) \t- Use consumable item\nRight Click (Inventory) \t- Drop item\n\n**Tip:
+    Tree does the least damage ;)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
