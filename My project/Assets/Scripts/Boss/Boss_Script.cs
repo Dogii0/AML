@@ -11,8 +11,9 @@ public class Boss_Script : MonoBehaviour
     private float timer;
     public GameObject player;
     public HealthBarBoss Healthbarboss;
-    public float Hitpoints;
-    public float max_HP;
+    public double Max_Health = 5;
+    public double health;
+    public double damage = 0.5;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -20,13 +21,13 @@ public class Boss_Script : MonoBehaviour
 
     void Start()
     {
-        Healthbarboss.SetHealth(Hitpoints, max_HP);
+        health = Max_Health;
+        Healthbarboss.SetHealthmax(Max_Health);
     }
 
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(distance);
         if (distance < 6.5)
         {
             timer += Time.deltaTime;
@@ -43,14 +44,22 @@ public class Boss_Script : MonoBehaviour
         Instantiate(bullet, bulletpos.position, Quaternion.identity);
     }
 
-    public void hit(float damage)
+    public void TakeDamage(double damage)
     {
-        Hitpoints -= damage;
-
-        if (Hitpoints == 0)
+        health -= damage;
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
+        Healthbarboss.SetHealthboss(health);
     }
     
+    private void OnCollisionStay2D(Collision2D Collission)
+    {
+        if (Collission.gameObject == player && Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("boss got hit");
+            TakeDamage(damage);
+        }
+    }
 }

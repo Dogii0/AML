@@ -4,24 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HealthBarBoss : MonoBehaviour
 {
-
     public Slider Slider;
-    public Color Low;
-    public Color High;
+    public Image fill;
+    public Gradient gradient;
 
-    public Vector3 Offset;
-
-    public void SetHealth(float health, float maxhealth)
+    public void SetHealthmax(double health)
     {
-        Slider.gameObject.SetActive(health < maxhealth);
-        Slider.value = health;
-        Slider.maxValue = maxhealth;
-        Slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, Slider.normalizedValue);
+        Slider.value = (float)health;
+        Slider.maxValue = (float)health;
+        fill.color = gradient.Evaluate(1f);
     }
+    public void SetHealthboss(double health)
+    {
+        Slider.value = (float)health;
+        fill.color = gradient.Evaluate(Slider.normalizedValue);
+    }
+    
+    
 
     // Update is called once per frame
-    void Update()
-    {
-        Slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
-    }
 }
