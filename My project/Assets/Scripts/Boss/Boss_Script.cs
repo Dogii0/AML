@@ -23,6 +23,7 @@ public class Boss_Script : MonoBehaviour
     {
         health = Max_Health;
         Healthbarboss.SetHealthmax(Max_Health);
+        DoorSceneChange.changeable = false;
     }
 
     void Update()
@@ -50,6 +51,7 @@ public class Boss_Script : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            DoorSceneChange.changeable = true;
         }
         Healthbarboss.SetHealthboss(health);
     }

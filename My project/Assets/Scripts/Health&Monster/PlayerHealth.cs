@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -23,9 +24,9 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(double damage)
     {
         health -= damage;
-        if (health <= 0)
+        if (health <= 1)
         {
-            Destroy(player);
+            SceneManager.LoadScene(5);
         }
         healthbar.SetHealth(health);
     }
