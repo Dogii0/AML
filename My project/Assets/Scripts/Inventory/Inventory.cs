@@ -13,6 +13,12 @@ public class Inventory
     private Action<Item> useItemAction;
     private Item weapon;
     private static Vector2 location;
+
+    private void Start()
+    {
+        // weapon = null;
+        // PlayerMovement.weapon = null;
+    }
     private void Update()
     {
         location = GameObject.FindWithTag("Player").transform.position;
@@ -21,7 +27,6 @@ public class Inventory
     public Inventory()
     {
         itemList = new List<Item>();
-        AddItem(new Item { itemType = Item.ItemType.Coin, amount = 10 });
     }
     public void AddItem(Item item)
     {
