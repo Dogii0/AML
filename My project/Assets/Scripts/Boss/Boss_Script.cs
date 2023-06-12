@@ -13,7 +13,7 @@ public class Boss_Script : MonoBehaviour
     public HealthBarBoss Healthbarboss;
     public double Max_Health = 5;
     public double health;
-    public double damage = 0.5;
+    public double damage = 0;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -58,6 +58,28 @@ public class Boss_Script : MonoBehaviour
     {
         if (Collission.gameObject == player && Input.GetKeyDown(KeyCode.Space))
         {
+            if (PlayerMovement.weapon == null)
+            {
+                Debug.Log("No weapon. Go pick up");
+            }
+            else
+            {
+                switch (PlayerMovement.weapon.itemType)
+                {
+                    case Item.ItemType.FireExt:
+                        damage = 1;
+                        break;
+                    case Item.ItemType.Umbrella:
+                        damage = 0.7;
+                        break;
+                    case Item.ItemType.Tree:
+                        damage = 0.5;
+                        break;
+                    default:
+                        damage = 0.3;
+                        break;
+                }
+            }
             Debug.Log("boss got hit");
             TakeDamage(damage);
         }

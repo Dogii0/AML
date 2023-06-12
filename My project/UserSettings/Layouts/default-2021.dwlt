@@ -45,7 +45,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1280
-    height: 677.3334
+    height: 677.3333
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 657.3334
+    y: 657.3333
     width: 1280
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -115,11 +115,11 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1280
-    height: 627.3334
+    height: 627.3333
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 2489
+  controlID: 87
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,11 +140,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 977.3333
-    height: 627.3334
+    height: 627.3333
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 2494
+  controlID: 88
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 2495
+  controlID: 89
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 734.6666
     height: 386
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
@@ -241,7 +241,7 @@ MonoBehaviour:
     x: 0
     y: 386
     width: 977.3333
-    height: 241.33337
+    height: 241.33331
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
@@ -270,9 +270,9 @@ MonoBehaviour:
     x: 977.3333
     y: 0
     width: 302.6667
-    height: 627.3334
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 627.3333
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -405,21 +405,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0aeafeff30eafeffe0eafeff3eecfeff0aeefeff6aeefeff20effeffe4effeff92f0feff16f2feff70f2feff04f3feffc2f4feff84f5feffa0f6feff04f7feffaef8feff36fafefff8fafeff0efcfeffdcfcfeff44fefeffac26ffff2427ffff9627ffff662affff282bffff9e2cffff862dffff862fffff4830ffff8a31ffff7e32ffff7a33ffff3c34ffffba34ffffb835ffff3436ffff7236ffffb837ffff7a38ffff0e39ffff2e3afffff03affff443bffff883cffff223effffea3effff6440ffff2641ffff4a41ffff0c42ffff7243fffffe50ffff6064ffff8a64ffff6065ffffb866ffff6c69ffff806affff426bffffd06cffff606effffc871ffff8072ffffd873ffff7c74ffffe275ffffc077ffff1879ffff0c7affff607affffa27afffff67affff527cffffa67cffff6a7fffff5e80ffff5c82ffff5484ffff2885ffffac87ffffa289fffff689ffff868dffff1a8effff6e8effffb48effffc68fffff9090ffffa491ffff1a96ffffac96ffff3c98ffffd299ffff8c9bffffda9cffffbe9fffff82a0ffffe8a1ffff58a2ffff6aa3ffff1ca5ffffdea5ffffbea6ffff3aa7ffffc4a7ffff68a9ffff2aaaffffe6aaffff46acffff5eb4ffff0eb7ffffe0b7ffffcebaffff30bbffff30cdffffb4cfffff34d1ffff32d3ffffe2d5ffff36d6ffff78d6ffffa8efffff04f0ffff7af0fffff0f0ffff88f3ffff3cf4ffffd4f4ffff50f5ffff0cf6ffff52f8ffff08f9ffff4cf9ffff86f9ffff08fbfffff4ffffffd4620000d66a00002a6b0000646b00007e6b0000d06d0000b47100004072000000730000347500008675000028770000427700003e7b00005c7b00009a7c0000b47c0000e67c00005c7e0000989f0000aa9f0000b89f0000f29f00000ca0000054a00000c8a0000086a600009ea600001ebd000036bd0000cec300006cc400002cc50000b6c90000fac9000012ca000042ca00001ccb000050cb000094cb0000accb000082d40000c6d40000ded4000078da00007eda0000c2da0000dada0000d2df000016e000002ee000005ee0000038e100004ae6000034e700007ced0000c0ed0000d8ed000010ee00006eee0000faee00009af40000def40000f6f400008afd0000cefd0000e6fd00000c0201005002010068020100a00201008a030100fe040100e40a0100200b0100380b01007011010076110100b2110100ca1101003a130100aa170100c2170100d41c0100da1c0100161d01002e1d0100661d0100501e01006c230100a8230100c02301007a29010080290100bc290100d4290100ec2e0100282f0100402f0100782f0100be350100c8350100de350100e8370100503c01005a3c0100703c0100bc410100c6410100dc410100c2470100cc470100e24701006e480100204e01000a4f01007a4f0100844f01009a4f010080550100a05501000c560100165601002c560100da580100aa590100125c01001c5c0100325c01009e5c0100a85c0100be5c0100306301003a63010050630100bc630100dc6301000069010052690100026f0100e8720100f672010080730100d27301000a740100827901000c7a01009880010074850100fe850100
+      m_ExpandedIDs: 0afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: HealthBar
-        m_OriginalName: HealthBar
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 99686
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -847,7 +847,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 399.6667}
     m_SelectedIDs: 34650000
     m_LastClickedID: 25908
-    m_ExpandedIDs: 000000009e640000a0640000a2640000a4640000a6640000a864000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000986400009a6400009c6400009e640000a0640000a2640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -875,7 +875,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e640000a0640000a2640000a4640000a6640000a864000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000986400009a6400009c6400009e640000a0640000a2640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -954,7 +954,7 @@ MonoBehaviour:
     x: 0
     y: 458.6667
     width: 976.3333
-    height: 220.33337
+    height: 220.33331
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1199,7 +1199,7 @@ MonoBehaviour:
     x: 977.3334
     y: 72.66667
     width: 301.6667
-    height: 606.3334
+    height: 606.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
