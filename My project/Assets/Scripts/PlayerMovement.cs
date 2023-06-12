@@ -9,15 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float movementSpeed;
     private KeyCode lastKeyPressed;
-    public static Item weapon;
+    public static Item weapon = null;
 
     [SerializeField] private int playerDirection;
     [SerializeField] private float moveX;
     [SerializeField] private float moveY;
     [SerializeField] private bool _isMoving;
-    [SerializeField] private bool _flipAnimation;
-
-    [SerializeField] private int cry;
+    [SerializeField] private int weaponInt;
     public bool isMoving 
     { 
         get { return _isMoving; } 
@@ -35,25 +33,23 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        cry = 0;
+        weapon = null;
         movementSpeed = 1.5f;
         transform.position = new Vector2(0,0);
     }
+    
     void Update()
     {
-        if (Item.ItemType.Tree == weapon.itemType)
+        if (weapon == null)
         {
-            cry = 1;
-            // Debug.Log(weapon.itemType);
-        }else if (Item.ItemType.FireExt == weapon.itemType)
-        {
-            cry = 2;
-            // Debug.Log(weapon.itemType);
-        }else if (Item.ItemType.Umbrella == weapon.itemType)
-        {
-            cry = 3;
-            // Debug.Log(weapon.itemType);
+            weaponInt = 0;
         }
+        else
+        {
+            weaponInt = weapon.getWeaponType(weapon);
+        }
+
+        animator.SetInteger(AnimationStrings.weaponType, weaponInt);
     }
 
     private void FixedUpdate()
@@ -94,16 +90,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void onAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (weapon != null)
         {
-            animator.SetBool(AnimationStrings.flipAnimation, _flipAnimation);
-            animator.SetTrigger(AnimationStrings.attackTrigger);
-            animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
+            if (context.started)
+            {
+                animator.SetTrigger(AnimationStrings.attackTrigger);
+                animator.SetInteger(AnimationStrings.playerDirection, playerDirection);
+            }
         }
-    }
-
-    public void gimmeWeaponPls(Item item)
-    {
-        weapon = item;
     }
 }

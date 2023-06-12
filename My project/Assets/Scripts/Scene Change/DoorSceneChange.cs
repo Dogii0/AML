@@ -9,6 +9,7 @@ public class DoorSceneChange : CollidableObject
     public TMP_Text pressKey;
     public int sceneID;
     private bool z_Interacted = false;
+    public static bool changeable = true;
     protected override void OnCollided(GameObject collidedObject)
     {
         if (!z_Interacted)
@@ -19,8 +20,16 @@ public class DoorSceneChange : CollidableObject
         if (Input.GetKey(KeyCode.E))
         {
             z_Interacted = true;
-            pressKey.text = " ";
-            SceneManager.LoadScene(sceneID);
+            if (changeable)
+            {
+                pressKey.text = " ";
+                SceneManager.LoadScene(sceneID);
+            }
+            else
+            {
+                pressKey.text = "Please defeat the Boss!!";
+            }
+            
         }
     }
 }

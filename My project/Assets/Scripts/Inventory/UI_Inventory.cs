@@ -13,7 +13,7 @@ public class UI_Inventory : MonoBehaviour
     private Transform itemSlotTemplate;
     private GameObject player;
     public PlayerHealth playerHealth;
-    private bool notFull = false;
+    // private bool notFull = false;
     private void Awake()
     {
         itemSlot = transform.Find("ItemSlot");
@@ -95,7 +95,7 @@ public class UI_Inventory : MonoBehaviour
             if (x > 3)
             {
                 x = 0;
-                y--;
+                y-=2;
             }
         }
     }

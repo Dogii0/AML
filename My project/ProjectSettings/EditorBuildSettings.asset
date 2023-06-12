@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lv0-Boss.unity
     guid: e89bae65fa0fe484281dc42ff001641d
+  - enabled: 1
+    path: Assets/Scenes/End Scene.unity
+    guid: 6fba577df41a7424f8a2fb54e9ad3ebb
+  - enabled: 1
+    path: Assets/Scenes/Death Scene.unity
+    guid: 148191ebac6c69e4cbe8f5da81a393c6
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cf784e874ddc50b45b44bcef42b32663, type: 2}
