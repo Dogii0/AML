@@ -12,6 +12,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start()
     {
+        weapon = null;
     }
 
     private void Awake()
