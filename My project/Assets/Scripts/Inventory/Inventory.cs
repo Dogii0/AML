@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory
 {
     public event EventHandler OnItemListChanged;
     private static List<Item> itemList;
     private Action<Item> useItemAction;
-    private Item weapon = null;
+    private Item weapon;
     private static Vector2 location;
-
     private void Update()
     {
         location = GameObject.FindWithTag("Player").transform.position;
@@ -21,20 +21,8 @@ public class Inventory
     public Inventory()
     {
         itemList = new List<Item>();
-
         AddItem(new Item { itemType = Item.ItemType.Coin, amount = 10 });
-        // AddItem(new Item { itemType = Item.ItemType.FireExt, amount = 1 });
     }
-
-    private void Start()
-    {
-    }
-
-    private void Awake()
-    {
-        
-    }
-
     public void AddItem(Item item)
     {
         if (item.IsStackable())
@@ -48,7 +36,6 @@ public class Inventory
                     itemAlreadyInInventory = true;
                 }
             }
-
             if (!itemAlreadyInInventory)
             {
                 itemList.Add(item);
@@ -56,11 +43,6 @@ public class Inventory
         }
         else
         {
-            if (weapon != null)
-            {
-                ItemWorld.DropItem(weapon);
-                itemList.Remove(weapon);
-            }
             weapon = item;
             itemList.Add(item);
             PlayerMovement.weapon = weapon;
@@ -68,7 +50,6 @@ public class Inventory
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
-
     public void RemoveItem(Item item)
     {
         if (item.IsStackable())
@@ -96,30 +77,8 @@ public class Inventory
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    public void UseItem(Item item)
-    {
-
-    }
-
     public List<Item> GetItemList()
     {
         return itemList;
     }
-    
-    /*
-    public int getWeaponType()
-    {
-        switch (weapon.itemType)
-        {
-            case Item.ItemType.Tree:
-                return 0;
-            case Item.ItemType.FireExt:
-                return 1;
-            case Item.ItemType.Umbrella:
-                return 2;
-        }
-
-        return -1;
-    }
-    */
 }
