@@ -9,10 +9,15 @@ public class PlayerInventory : MonoBehaviour
     public static Item weapon = null;
 
     [SerializeField] private UI_Inventory uiInventory;
-    
+
+    private void Start()
+    {
+    }
+
     private void Awake()
     {
         inventory = new Inventory();
+        inventory.AddItem(new Item { itemType = Item.ItemType.Coin, amount = 10 });
         uiInventory.SetInventory(inventory);
     }
 
